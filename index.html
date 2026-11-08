@@ -747,6 +747,10 @@
   if (!form) return;
   var status = document.getElementById('form-status');
   var thanks = document.getElementById('form-thanks');
+  var emailField = document.getElementById('cf-email');
+  var emailMsg = 'Please enter a valid email address.';
+  emailField.addEventListener('invalid', function () { emailField.setCustomValidity(emailMsg); });
+  emailField.addEventListener('input', function () { emailField.setCustomValidity(''); });
   var btn = form.querySelector('button[type="submit"]');
   var fail = 'Sorry, something went wrong. Please try again, or email hello@samwalby.com.';
   form.addEventListener('submit', function (e) {
