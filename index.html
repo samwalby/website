@@ -424,7 +424,8 @@
 
   /* Thank-you message replaces the form after sending */
   .contact-form[hidden], .form-thanks[hidden] { display: none; }
-  .form-thanks { margin: 22px 0 16px; font-size: 1.15rem; outline: none; }
+  .form-thanks { display: flex; gap: 12px; align-items: flex-start; margin: 22px 0 16px; padding: 16px 18px; max-width: 520px; font-family: 'Fraunces', Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 600; font-size: 1.25rem; line-height: 1.4; color: #EBCB7D; background: rgba(245,241,236,0.09); border-left: 4px solid #D9B45F; border-radius: 8px; outline: none; }
+  .form-thanks .tick { flex: 0 0 26px; width: 26px; height: 26px; margin-top: 1px; }
 </style>
 </head>
 <body>
@@ -670,7 +671,7 @@
         <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
         <p class="form-note">Messages delivered by Web3Forms.</p>
       </form>
-      <p id="form-thanks" class="form-thanks" role="status" tabindex="-1" hidden>Thanks — your message has been sent. I’ll be in touch!</p>
+      <p id="form-thanks" class="form-thanks" role="status" tabindex="-1" hidden><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.8 2.8L16 9.5"/></svg><span>Thanks — your message has been sent. I’ll be in touch!</span></p>
 
       <p>Email: <a href="mailto:hello@samwalby.com">hello@samwalby.com</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/sam-walby" target="_blank" rel="noopener">linkedin.com/in/sam-walby</a></p>
